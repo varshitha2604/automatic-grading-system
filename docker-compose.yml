@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  service1:
+    build:
+      context: C:\Users\varsh\OneDrive\Desktop\project\service1
+      dockerfile: Dockerfile
+    ports:
+      - "8080:5000"
+    networks:
+      - my-network
+
+  service2:
+    build:
+      context: C:\Users\varsh\OneDrive\Desktop\project\service2
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+    networks:
+      - my-network
+
+networks:
+  my-network:
